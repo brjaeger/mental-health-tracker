@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from main.views import edit_mood
 
 urlpatterns = [
     path('', include('main.urls')),
+    path('edit-mood/<uuid:id>', edit_mood, name='edit_mood'),
 ]
